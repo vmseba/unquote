@@ -1,0 +1,9 @@
+name: unquote
+description: A sample application based on Polymer tutorial
+dependencies:
+  core_elements: '>=0.1.1+2 <0.2.0'
+  paper_elements: '>=0.1.0+3 <0.2.0'
+  polymer: '>=0.12.0 <0.13.0'
+transformers:
+- polymer:
+    entry_points: web/unquote.html

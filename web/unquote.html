@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <title>Dart Polymer Tutorial</title>
+    <script src="packages/web_components/platform.js"></script>
+    <script src="packages/web_components/dart_support.js"></script>
+    <!-- import polymer components -->
+    <link rel="import" href="packages/core_elements/core_header_panel.html">
+    <link rel="import" href="packages/core_elements/core_toolbar.html">
+    <!-- import paper components -->
+    <link rel="import" href="packages/paper_elements/paper_tabs.html">
+    <!-- import custom elements -->
+    <link rel="import" href="./post-card/post-card.html">
+    <!-- font -->
+    <link rel="import" href="./components/font-roboto/roboto.html">
+    <!-- scripts -->
+    <script type="application/dart">export 'package:polymer/init.dart';</script>
+    <script src="packages/browser/dart.js"></script>
+    <script type="application/dart" src="unquote.dart"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="unquote.css">    
+  </head>
+  <body unresolved touch-action="auto">
+    <core-header-panel>
+      <core-toolbar>
+        <paper-tabs id="tabs" selected="all" self-end>
+          <paper-tab name="all">ALL</paper-tab>
+          <paper-tab name="favorites">FAVORITES</paper-tab>
+        </paper-tabs>
+      </core-toolbar>
+      
+      <!-- content -->
+      <div class="container" layout vertical center>
+        <post-card>
+          <img width="70" height="70" 
+            src="./images/avatar-07.svg">
+          <h2>Another Developer</h2>
+          <p>I'm composing with shadow DOM!</p>
+        </post-card>
+      </div>
+    </core-header-panel>
+    
+  </body>
+</html>
